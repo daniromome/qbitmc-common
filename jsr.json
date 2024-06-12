@@ -5,5 +5,8 @@
     ".": "./mod.ts",
     "./models": "./models/mod.ts",
     "./utils": "./utils/mod.ts"
+  },
+  "publish": {
+    "exclude": ["deno"]
   }
 }

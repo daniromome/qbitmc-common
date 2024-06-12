@@ -1,0 +1,7 @@
+{
+  "name": "@qbitmc/deno",
+  "version": "0.0.1",
+  "exports": {
+    "./appwrite": "./appwrite/mod.ts"
+  }
+}
