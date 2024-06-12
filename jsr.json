@@ -2,7 +2,7 @@
   "name": "@qbitmc/common",
   "version": "0.0.3",
   "exports": {
-    "./": "./mod.ts",
+    ".": "./mod.ts",
     "./models": "./models/mod.ts",
     "./utils": "./utils/mod.ts"
   }
