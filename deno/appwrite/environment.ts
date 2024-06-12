@@ -3,6 +3,7 @@ export type Environment = {
     api: {
       endpoint: string
       key: string
+      project: string
     }
     bucket: {
       application: string
@@ -44,6 +45,7 @@ export function loadEnvironment(): Environment {
   const env = {
     APPWRITE_ENDPOINT: Deno.env.get('APPWRITE_ENDPOINT'),
     APPWRITE_API_KEY: Deno.env.get('APPWRITE_API_KEY'),
+    APPWRITE_PROJECT: Deno.env.get('APPWRITE_PROJECT'),
     APPWRITE_BUCKET_APPLICATION: Deno.env.get('APPWRITE_BUCKET_APPLICATION'),
     APPWRITE_COLLECTION_PLAYER: Deno.env.get('APPWRITE_COLLECTION_PLAYER'),
     APPWRITE_COLLECTION_PROFILE: Deno.env.get('APPWRITE_COLLECTION_PROFILE'),
@@ -70,7 +72,8 @@ export function loadEnvironment(): Environment {
     appwrite: {
       api: {
         endpoint: env.APPWRITE_ENDPOINT!,
-        key: env.APPWRITE_API_KEY!
+        key: env.APPWRITE_API_KEY!,
+        project: env.APPWRITE_PROJECT!
       },
       bucket: {
         application: env.APPWRITE_BUCKET_APPLICATION!,
