@@ -1,4 +1,4 @@
-import { Models } from 'npm:appwrite@15'
+import { Document } from './document.ts'
 import { Profile } from './profile.ts'
 
 export interface EnrollmentApplicationStatus {
@@ -7,7 +7,7 @@ export interface EnrollmentApplicationStatus {
   channel: string
 }
 
-export type EnrollmentApplicationStatusDocument = EnrollmentApplicationStatus & Models.Document
+export type EnrollmentApplicationStatusDocument = EnrollmentApplicationStatus & Document
 
 export interface EnrollmentApplication {
   age: number
@@ -18,7 +18,7 @@ export interface EnrollmentApplication {
   profile: string
 }
 
-export interface EnrollmentApplicationDocument extends Omit<EnrollmentApplication, 'profile'>, Models.Document {
+export interface EnrollmentApplicationDocument extends Omit<EnrollmentApplication, 'profile'>, Document {
   status: EnrollmentApplicationStatusDocument
   profile: Profile
 }

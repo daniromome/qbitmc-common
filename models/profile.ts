@@ -1,7 +1,7 @@
-import { Models } from 'npm:appwrite@15'
+import { Document } from './document.ts';
 import { Player } from './player.ts'
 
-export interface Profile extends Models.Document {
+export interface Profile extends Document {
   customer: string
   players: Player[]
 }

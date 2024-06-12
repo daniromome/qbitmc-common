@@ -1,10 +1,10 @@
-import { Models } from 'npm:appwrite@15'
+import { Document } from './document.ts';
 import { Profile } from './profile.ts'
 
 export interface Player {
   ign: string
 }
 
-export interface PlayerDocument extends Player, Models.Document {
+export interface PlayerDocument extends Player, Document {
   profile: Profile
 }

@@ -1,4 +1,4 @@
-import { Models } from "npm:appwrite@15";
+import { Document } from "./document.ts";
 import { Metadata } from "./metadata.ts"
 
 export interface Product {
@@ -10,4 +10,4 @@ export interface Product {
   metadata: Metadata[]
 }
 
-export type ProductDocument = Product & Models.Document
+export type ProductDocument = Product & Document

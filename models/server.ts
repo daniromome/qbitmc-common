@@ -1,4 +1,4 @@
-import { Models } from 'npm:appwrite@15';
+import { Document } from './document.ts';
 import { Visibility } from './visibility.ts'
 
 export interface Server {
@@ -12,4 +12,4 @@ export interface Server {
   visibility: Visibility
 }
 
-export type ServerDocument = Server & Models.Document
+export type ServerDocument = Server & Document
