@@ -1,1 +1,1 @@
-export * from './load-environment.ts'
+export * from './environment.ts'
