@@ -1,4 +1,46 @@
-export function loadEnvironment() {
+export type Environment = {
+  appwrite: {
+    api: {
+      endpoint: string
+      key: string
+    }
+    bucket: {
+      application: string
+    }
+    collection: {
+      player: string
+      profile: string
+      verification: string
+      status: string
+    }
+    database: string
+  }
+  config: {
+    env: string
+    hosts: string
+  }
+  discord: {
+    token: string
+    publicKey: string
+    channel: {
+      farewell: string
+      application: string
+    }
+    role: {
+      admin: string
+      mod: string
+      family: string
+      supporter: string
+      qbitor: string
+    }
+  }
+  pterodactyl: {
+    token: string
+    url: string
+  }
+}
+
+export function loadEnvironment(): Environment {
   const env = {
     APPWRITE_ENDPOINT: Deno.env.get('APPWRITE_ENDPOINT'),
     APPWRITE_API_KEY: Deno.env.get('APPWRITE_API_KEY'),
@@ -61,8 +103,8 @@ export function loadEnvironment() {
       }
     },
     pterodactyl: {
-      token: env.PTERODACTYL_TOKEN,
-      url: env.PTERODACTYL_URL
+      token: env.PTERODACTYL_TOKEN!,
+      url: env.PTERODACTYL_URL!
     }
   }
 }
