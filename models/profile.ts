@@ -1,7 +1,9 @@
 import { Document } from './document.ts';
-import { Player } from './player.ts'
+import { PlayerDocument } from './player.ts'
 
 export interface Profile extends Document {
+  discord: string
   customer: string
-  players: Player[]
+  qbits: number
+  players: PlayerDocument[]
 }
