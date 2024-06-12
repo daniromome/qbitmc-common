@@ -2,7 +2,7 @@ import { Document } from './document.ts'
 import { Profile } from './profile.ts'
 
 export interface EnrollmentApplicationStatus {
-  status: boolean
+  approved: boolean
   application: string
   channel: string
 }
