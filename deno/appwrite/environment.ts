@@ -11,6 +11,7 @@ export type Environment = {
     collection: {
       player: string
       profile: string
+      application: string
       verification: string
       status: string
     }
@@ -50,6 +51,7 @@ export function loadEnvironment(): Environment {
     APPWRITE_COLLECTION_PLAYER: Deno.env.get('APPWRITE_COLLECTION_PLAYER'),
     APPWRITE_COLLECTION_PROFILE: Deno.env.get('APPWRITE_COLLECTION_PROFILE'),
     APPWRITE_COLLECTION_VERIFICATION: Deno.env.get('APPWRITE_COLLECTION_VERIFICATION'),
+    APPWRITE_COLLECTION_APPLICATION: Deno.env.get('APPWRITE_COLLECTION_APPLICATION'),
     APPWRITE_COLLECTION_APPLICATION_STATUS: Deno.env.get('APPWRITE_COLLECTION_APPLICATION_STATUS'),
     APPWRITE_DATABASE_ID: Deno.env.get('APPWRITE_DATABASE_ID'),
     ENV: Deno.env.get('ENV'),
@@ -81,6 +83,7 @@ export function loadEnvironment(): Environment {
       collection: {
         player: env.APPWRITE_COLLECTION_PLAYER!,
         profile: env.APPWRITE_COLLECTION_PROFILE!,
+        application: env.APPWRITE_COLLECTION_APPLICATION!,
         verification: env.APPWRITE_COLLECTION_VERIFICATION!,
         status: env.APPWRITE_COLLECTION_APPLICATION_STATUS!
       },
