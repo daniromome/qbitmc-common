@@ -1,0 +1,8 @@
+{
+  "name": "@qbitmc/common",
+  "version": "0.0.1",
+  "exports": {
+    "./models": "./models/mod.ts",
+    "./utils": "./utils/mod.ts"
+  }
+}
