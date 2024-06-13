@@ -7,7 +7,6 @@ export interface Server {
   game: string
   media: string[]
   ip: string
-  loader: string
   version: string
   visibility: Visibility
 }
