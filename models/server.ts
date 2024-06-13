@@ -2,7 +2,6 @@ import { Document } from './document.ts';
 import { Visibility } from './visibility.ts'
 
 export interface Server {
-  $id: string
   name: string
   description: string
   game: string
