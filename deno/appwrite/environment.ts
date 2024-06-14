@@ -15,6 +15,7 @@ export type Environment = {
       verification: string
       status: string
       server: string
+      product: string
     }
     database: string
   }
@@ -55,6 +56,7 @@ export function loadEnvironment(): Environment {
     APPWRITE_COLLECTION_APPLICATION: Deno.env.get('APPWRITE_COLLECTION_APPLICATION'),
     APPWRITE_COLLECTION_APPLICATION_STATUS: Deno.env.get('APPWRITE_COLLECTION_APPLICATION_STATUS'),
     APPWRITE_COLLECTION_SERVER: Deno.env.get('APPWRITE_COLLECTION_SERVER'),
+    APPWRITE_COLLECTION_PRODUCT: Deno.env.get('APPWRITE_COLLECTION_PRODUCT'),
     APPWRITE_DATABASE_ID: Deno.env.get('APPWRITE_DATABASE_ID'),
     ENV: Deno.env.get('ENV'),
     ALLOWED_IP: Deno.env.get('ALLOWED_IP'),
@@ -88,7 +90,8 @@ export function loadEnvironment(): Environment {
         application: env.APPWRITE_COLLECTION_APPLICATION!,
         verification: env.APPWRITE_COLLECTION_VERIFICATION!,
         status: env.APPWRITE_COLLECTION_APPLICATION_STATUS!,
-        server: env.APPWRITE_COLLECTION_SERVER!
+        server: env.APPWRITE_COLLECTION_SERVER!,
+        product: env.APPWRITE_COLLECTION_PRODUCT!
       },
       database: env.APPWRITE_DATABASE_ID!
     },
