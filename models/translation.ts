@@ -3,7 +3,7 @@ import { Locale } from './locale.ts'
 
 export interface Translation {
   key: string
-  value: string
+  message: string
   locale: Locale
 }
 
