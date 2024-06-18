@@ -7,7 +7,9 @@ export interface EnrollmentApplicationStatus {
   channel: string
 }
 
-export type EnrollmentApplicationStatusDocument = EnrollmentApplicationStatus & Document
+export interface EnrollmentApplicationStatusDocument extends Omit<EnrollmentApplicationStatus, 'application'>, Document {
+  application: EnrollmentApplicationDocument
+}
 
 export interface EnrollmentApplication {
   age: number
