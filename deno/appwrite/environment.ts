@@ -38,6 +38,7 @@ export type Environment = {
       supporter: string
       qbitor: string
     }
+    guild: string
   }
   pterodactyl: {
     token: string
@@ -63,6 +64,7 @@ export function loadEnvironment(): Environment {
     ENV: Deno.env.get('ENV'),
     ALLOWED_IP: Deno.env.get('ALLOWED_IP'),
     DISCORD_TOKEN: Deno.env.get('DISCORD_TOKEN'),
+    DISCORD_GUILD: Deno.env.get('DISCORD_GUILD'),
     DISCORD_PUBLIC_KEY: Deno.env.get('DISCORD_PUBLIC_KEY'),
     DISCORD_CHANNEL_APPLICATION: Deno.env.get('DISCORD_CHANNEL_APPLICATION'),
     DISCORD_CHANNEL_FAREWELL: Deno.env.get('DISCORD_CHANNEL_FAREWELL'),
@@ -115,7 +117,8 @@ export function loadEnvironment(): Environment {
         family: env.DISCORD_ROLE_FAMILY!,
         supporter: env.DISCORD_ROLE_SUPPORTER!,
         qbitor: env.DISCORD_ROLE_QBITOR!
-      }
+      },
+      guild: env.DISCORD_GUILD!
     },
     pterodactyl: {
       token: env.PTERODACTYL_TOKEN!,
