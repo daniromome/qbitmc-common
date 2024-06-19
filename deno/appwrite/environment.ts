@@ -46,6 +46,9 @@ export type Environment = {
     token: string
     url: string
   }
+  stripe: {
+    secret: string
+  }
 }
 
 export function loadEnvironment(): Environment {
@@ -79,6 +82,7 @@ export function loadEnvironment(): Environment {
     DISCORD_ROLE_QBITOR: Deno.env.get('DISCORD_ROLE_QBITOR'),
     PTERODACTYL_TOKEN: Deno.env.get('PTERODACTYL_TOKEN'),
     PTERODACTYL_URL: Deno.env.get('PTERODACTYL_URL'),
+    STRIPE_SECRET: Deno.env.get('STRIPE_SECRET')
   }
   const undefinedEntries = Object.entries(env).filter(([_key, value]) => !value)
   if (undefinedEntries.length > 0) throw new Error(`The following environment variables are not defined: ${undefinedEntries.map(e => e[0]).concat(', ')}`)
@@ -129,6 +133,9 @@ export function loadEnvironment(): Environment {
     pterodactyl: {
       token: env.PTERODACTYL_TOKEN!,
       url: env.PTERODACTYL_URL!
+    },
+    stripe: {
+      secret: env.STRIPE_SECRET!
     }
   }
 }
