@@ -1,5 +1,5 @@
-import { Document } from './document.ts';
-import { Metadata } from './metadata.ts';
+import { Document } from './document.ts'
+import { MetadataDocument } from './metadata.ts'
 import { Visibility } from './visibility.ts'
 
 export interface Server {
@@ -13,5 +13,5 @@ export interface Server {
 }
 
 export interface ServerDocument extends Server, Document {
-  metadata: Metadata[]
+  metadata: MetadataDocument[]
 }
