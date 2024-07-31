@@ -14,7 +14,8 @@ export const USER_LABEL = {
   ADMIN: 'admin',
   GUEST: 'guest',
   DISABLED: 'disabled',
-  APPLICANT: 'applicant'
+  APPLICANT: 'applicant',
+  FAMILY: 'family'
 } as const
 
 export type UserLabel = ObjectValues<typeof USER_LABEL>
