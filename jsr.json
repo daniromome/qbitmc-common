@@ -8,5 +8,6 @@
   },
   "publish": {
     "exclude": ["deno"]
-  }
+  },
+  "license": "NONE"
 }
