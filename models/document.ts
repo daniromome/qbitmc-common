@@ -1,8 +1,12 @@
 export interface Document {
   /**
-         * Document ID.
-         */
+   * Document ID.
+   */
   $id: string;
+  /**
+   * Document automatically incrementing ID.
+   */
+  $sequence: number;
   /**
    * Collection ID.
    */
